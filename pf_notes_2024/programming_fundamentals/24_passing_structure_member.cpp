@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+struct student{
+	int rollNo;
+	string name;
+	int marks;
+	double percentage;
+};
+void display(int rollNo,string name,int marks,double percentage){
+	 cout<<"rollno:"<<rollNo<<" name:"<<name<<" marks/100:"<<marks<<" percentage:"<<percentage<<endl;
+}
+
+int main(){
+	student s1={69,"thomas",77,83.35};
+	student s2={63,"muhammad",81,87.73};
+
+    display(s1.rollNo,s1.name,s1.marks,s1.percentage);
+
+	return 0;
+}
+
+
