@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>Document Object Model</h1>
+    <ul>
+        <li>Buy groceries</li>
+        <li>Feed the cat</li>
+        <li>Do laundry</li>
+    </ul>
+
+    <script>
+        // Creating New Nodes
+        let pCreated=document.createElement("p");
+        console.log(pCreated);
+        // let h1Created=document.createElement("h1");
+        // console.log(h1Created);
+        // let article=document.createElement("article");
+        // console.log(article);
+        
+        pCreated.textContent="this is a created paragraph using DOM";
+        console.log(pCreated);
+// An alternate method of setting the content of the element is with the innerHTML property, which allows you to add HTML as well as text to an element
+        pCreated.innerHTML="this is a created <strong>paragraph</strong> using DOM";
+        console.log(pCreated);
+        
+        let tNode=document.createTextNode("I'm a new text node.");
+        console.log(tNode);
+
+
+        // select To-do list ul element
+        const todoList=document.querySelector('ul');
+        // Create to-do
+        const newTodo = document.createElement('li');
+        newTodo.textContent = 'Do homework';
+        // Add new todo to the end of the list
+        todoList.appendChild(newTodo);
+
+        // select To-do list ul element
+        const anotherTodo = document.createElement('li');
+        // Create new to-do
+        anotherTodo.textContent = 'Pay bills';
+        // Add new to-do to the beginning of the list
+        todoList.insertBefore(anotherTodo, todoList.firstElementChild);
+
+        // select To-do list ul element
+        const modifiedTodo = document.createElement('li');
+        // Create new to-do
+        modifiedTodo.textContent = 'Feed the dog';
+        // Replace existing to-do with modified to-do
+        todoList.replaceChild(modifiedTodo, todoList.children[2]);
+
+
+        todoList.removeChild(todoList.lastElementChild);
+        // Remove second element child from todoList
+        todoList.children[1].remove();
+
+
+    </script>
+</body>
+</html>

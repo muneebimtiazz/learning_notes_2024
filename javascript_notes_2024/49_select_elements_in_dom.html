@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        html { font-family: sans-serif; color: #333; }
+        div, article { width: 40%; padding: 10px; margin: 5px;
+        border: 1px solid #dedede; }
+        </style>
+</head>
+<body>
+
+    <div id="mainID">getElementById</div>
+
+    <div class="mainClass">getElementsByClassName</div>
+    <div class="mainClass">getElementsByClassName</div>
+
+    <article>getElementsByTagName</article>
+    <article>getElementsByTagName</article>
+
+    <div id="demo-query">querySelector</div>
+
+    <div class="demo-query-all">querySelectorAll</div>
+    <div class="demo-query-all">querySelectorAll</div>
+
+    <script>
+        // GETELEMENTBYID
+        let mainI=document.getElementById("mainID");
+        console.log(mainI);
+        console.log(mainI.outerHTML);
+        mainI.style.border="2px solid red";
+
+        // GETELEMENTSBYCLASSNAME:Pass this method the name of a class, and you’ll get back all elements that have that class, as a NodeList
+        let mainC=document.getElementsByClassName("mainClass");
+        console.log(mainC); // getElementsByClassName() will return an array-like object of elements, and you can modify each class in the document with a for loop.
+        // mainC.style.border="2px solid blue"; //error
+        for (i = 0;i<mainC.length;i++) {
+            mainC[i].style.border = "2px solid blue";
+        }
+        // GETELEMENTSBYTAGTAGNAME
+        let mainT=document.getElementsByTagName("article");
+        console.log(mainT); // getElementsByTagName() will return an array-like object of elements, and you can modify every tag in the document with a for loop.
+        mainT.border="2px solid purple"; 
+        for (i = 0;i<mainT.length;i++) {
+            mainT[i].style.border = "2px solid purple";
+        }
+        mainT[0].style.color="purple";
+
+        // QUERYSELECTOR:This method takes a selector (just like a CSS selector) and returns the first element that matches
+        let queryS=document.querySelector("#demo-query");
+        console.log(queryS);
+        queryS.style.border = "2px solid green";
+
+        // QUERYSELECTORALL:This method also takes a selector, but returns all the elements that match, as a NodeList.
+        let querySA = document.querySelectorAll(".demo-query-all");
+        console.log(querySA);
+        querySA.forEach(item => {
+            item.style.border = "2px solid orange";
+        });
+    </script>
+</body>
+</html>

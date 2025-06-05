@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Handling Example</title>
+</head>
+<body>
+    <!-- Example 1: Inline event handling -->
+    <button id="btn" onclick="console.log('button was clicked')">Click Me</button>
+
+    <!-- Example 2: Event handling in script -->
+    <div id="box">Hover over me</div>
+
+    <script>
+        // Selecting the button and div elements
+        let btn = document.getElementById("btn");
+        let box = document.getElementById("box");
+
+        // Event handling for the div element
+        box.onmouseover = () => {
+            console.log('Mouse hovered over the div');
+        }
+
+        // Event object demonstration
+        btn.onclick = (e) => {
+            console.log(e); // Full event object
+            console.log(e.type); // Event type (e.g., "click")
+            console.log(e.target); // Element that triggered the event
+            console.log(e.clientX, e.clientY); // Mouse coordinates when the event occurred
+        }
+
+        // Event listeners
+        btn.addEventListener("click", () => {
+            console.log("button was clicked")
+        });
+
+        btn.addEventListener("click", () => {
+            console.log("button was clicked - handler2")
+        });
+
+        // Removing event listener
+        let handler2 = () => {
+            console.log("button was clicked - handler2")
+        };
+        btn.addEventListener("click", handler2);
+
+        // Removing the event listener
+        btn.removeEventListener("click", handler2);
+    </script>
+</body>
+</html>

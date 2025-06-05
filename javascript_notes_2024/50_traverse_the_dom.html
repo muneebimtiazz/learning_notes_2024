@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        body {font-family: sans-serif; color: #333; }
+        li {width: 20%; padding: 10px; margin: 5px;border: 1px solid black;}
+        ul {list-style-type: none;}
+    </style>
+</head>
+<body>
+    <p>The Solar System[c] is the gravitationally bound system of the Sun and the objects that orbit it.[11] It was formed 4.6 billion years ago when a dense region of a molecular cloud collapsed, forming the Sun and a protoplanetary disc. The Sun is an ordinary main sequence star that maintains a balanced equilibrium by the fusion of hydrogen into helium at its core, releasing this energy from its outer photosphere.</p>
+    <ul>
+        <li>mercury</li>
+        <li>venus</li>
+        <li>earth</li>
+        <li>mars</li>
+        <li>jupiter</li>
+        <li>saturn</li>
+        <li>uranus</li>
+        <li>neptune</li>
+    </ul>
+</body>
+    <script>
+
+        let ul=document.getElementsByTagName("ul")[0]
+        let li=document.getElementsByTagName("li")[0]
+
+        //childNodes includes text,element,comment
+        console.log(document.body.childNodes);
+        console.log(document.body.childNodes[3].childNodes);
+        console.log(document.body.childNodes[3].childNodes[5]);
+
+        //firstChild or lastChild
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+
+        //firstElementChild or lastElementChild
+        console.log(ul.firstElementChild);
+        ul.firstElementChild.style.backgroundColor="red";
+        ul.lastElementChild.style.backgroundColor="blue";
+
+        //childNodes or children
+        console.log(ul.childNodes);
+        console.log(ul.children);
+        console.log(ul.children[3].style.backgroundColor="orange");
+
+        //nextElementSibling or previousElementSibling
+        console.log(ul.children[3].nextElementSibling.style.backgroundColor="purple");
+        console.log(ul.children[3].previousElementSibling.style.backgroundColor="brown");
+
+        // nextSibling or previousSibling --> use for nodes
+        // ?
+
+        console.log(li.parentElement);
+        console.log(li.parentNode.parentNode);
+
+
+        // // A for...of loop can be used to iterate through all children elements.
+        // for (let element of ul.children){
+        //     element.style.background = 'purple';
+        // }
+
+        // let ulT = document.querySelector('ul');
+        // let children = ulT.children;
+        // for (let i = 0; i < children.length; i++) {
+        //     children[i].style.background = 'purple';
+        // }
+
+    </script>
+</html>
