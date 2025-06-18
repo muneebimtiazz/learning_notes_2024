@@ -1,0 +1,98 @@
+--version
+clear
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --list
+
+ls
+ls -a all commands
+pwd
+mkdir
+cd 
+cd..
+\\
+
+git status
+
+untracked - files that git doesnot yet track
+hum sarif usi file ko tracked kar sktay han aggr us file ko hum ny pelay he commit(screenshot) kiya ho
+modified - make change in a file
+staged - if we add a new file but didnot commit the file will be untrack so it will be staged wo file 
+unmodified - no change in a file
+
+aggr hum
+file ma change karty hn to wo  
+modified hota ha  
+file ko create karty hn to wo 
+untracked hoti ha
+
+first humy inn changes ko add karna prtaha to staged
+last step will be comit means unmodified
+
+---add and commit---
+git add index.html
+git add . (this will add all files)
+
+git commit -m "should be meaningfull message"
+
+---push command---
+to upload local content to remote(github)
+git push origin main
+origin is name of github copy of that file
+
+---init command---
+git repo create karnay ky layie kaam atti ha y command
+aggr hum apnay new project ma git ko use karna chatay han to pr hum git init ki command use kartay han
+
+git init
+git remote add origin <-link->
+git remote -v (tocheck) 
+git branch 
+git branch -M main
+git push origin main
+
+workflow on github
+github repo
+clone
+changes
+add 
+commit 
+push
+
+--git branches--
+aggr ik project pa boht si log kaam kar rehe han to separate feature pa kaam karnay ky layie ik alada sy ik branch banti ha.
+
+Hum branches isliye create karte hain taake code alag-alag manage kar saken. For example, agar humare paas ek "main" branch aur ek "feature" branch hai, aur hum in dono ka code combine karna chahte hain, toh hum inhe merge kar sakte hain. Merge karna ka matlab hai ke dono branches ka code ek jaga par le aana.
+
+Hum branches kyun create karte hain? imagine ek developer kisi specific feature par kaam kar raha hai aur doosra developer kisi aur feature par. Kya pehla developer doosre developer ke kaam khatam hone ka intezar kare ke phir wo naye changes add karein? Generally, bohot saare developers ek saath kaam kar rahe hote hain, toh har developer doosre ka intezar nahi kar sakta. Har developer alag branches par kaam kar sakta hai bina doosron ko affect kiye, aur baad mein changes merge karke sabka kaam ek jaga par le aaya ja sakta hai. 
+
+---creating branch commands---
+git branch (to check branch)
+git branch -M MAIN (to rename branch)
+GIT checkout <-branch name->  (to navigate)
+git checkout - b <-new branch name-> (to create new branch)
+git branch -d <-branch name-> (to delete a branch)
+
+
+---merging branch commands---
+way 1
+git diff <-branch name->
+git merge <-branch name->
+
+way 2 
+create a pr
+(pull request)
+
+---resolving merging conflicts---
+
+
+
+
+
+
+
+
+
+
+
