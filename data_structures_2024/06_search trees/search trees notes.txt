@@ -1,0 +1,9 @@
+variations of search trees 
+binary search tree
+balanced search tree
+avl tree
+splay tree
+red black tree
+(2,4) tree
+
+//learn morris traversal lovebabbar google asked

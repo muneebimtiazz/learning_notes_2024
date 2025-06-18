@@ -1,0 +1,60 @@
+types of tree
+1-binary trees
+2-generic trees
+3-nary trees
+
+types of search trees
+1-binary search tree
+2-avl tree
+3-red black tree
+4-splay tree
+5-(2,4) tree
+
+types of binary tree
+1-strict binary tree
+2-complete binary tree
+3-perfect binary tree
+4-balanced binary tree
+
+implemetation of binary tree
+1-dynamically created node
+2-arrays->heaps
+(for complete binary tree)
+
+tree traversals
+1-breath-first
+	~level-order
+2-depth-first
+	~pre-order
+	~in-order
+	~post-order
+
+Breath-First Traversal (BFS) and Depth-First Traversal (DFS) are two different strategies for traversing or visiting all the nodes in a tree or graph. Level Order Traversal is a specific form of BFS applied to trees.
+
+Breath-First Traversal (BFS): BFS explores the nodes level by level, visiting all the neighbors of a node before moving on to the next level.
+
+Algorithm:
+Enqueue the starting node.
+Dequeue a node and visit it.
+Enqueue all unvisited neighbors of the visited node.
+Repeat steps 2-3 until the queue is empty.
+
+Level Order Traversal: Level Order Traversal is a specific form of BFS applied to trees. It visits nodes level by level, from left to right, starting from the root.
+Algorithm: Similar to BFS but with a queue.
+Enqueue the root.
+Dequeue a node and visit it.
+Enqueue all unvisited children of the visited node, from left to right.
+Repeat steps 2-3 until the queue is empty.
+
+Depth-First Traversal (DFS): DFS explores as far as possible along each branch before backtracking. It can be implemented using recursion or a stack.
+Algorithm:
+Start at the root node.
+Visit the node.
+Recursively traverse all unvisited neighbors of the node.
+Repeat steps 2-3 until all nodes are visited.
+
+
+In summary:
+BFS and DFS are general traversal strategies applicable to both trees and graphs.
+Level Order Traversal is a specific application of BFS for trees where nodes at the same level are visited before moving on to the next level.
+These traversal methods are fundamental for exploring and searching through tree and graph structures in computer science. The choice of traversal depends on the specific requirements of the problem being solved.

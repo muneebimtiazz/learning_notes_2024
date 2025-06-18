@@ -1,0 +1,19 @@
+datastructure->primitive,non primitive
+primitive->int,char,float/double,bool,*ptr
+non primitive->linear,nonlinear
+linear->static[arrays],dynamic[arrays,linkedlist,stacks,queues]
+nonlinear->trees,graphs
+
+
+array
+string
+pointer
+structure
+linkedlist
+stacks
+queues
+trees
+heaps
+priorty queues
+graphs
+hashing

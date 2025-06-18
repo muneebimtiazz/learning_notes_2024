@@ -1,0 +1,109 @@
+****************************
+        create()
+****************************
+Node* NN = new Node;
+NN->data = d;
+NN->next = NULL;
+NN->prev = NULL;
+if (head == NULL)
+    head = NN;
+else {
+    Node* p = head;
+    while (p->next != NULL) {
+        p = p->next;
+    }
+    p->next = NN;
+    NN->prev = p;
+}
+****************************
+        insert()
+****************************
+Node* NN = new Node;
+NN->data = d;
+NN->next = NULL;
+NN->prev = NULL;
+
+// beg
+NN->next = head;
+head->prev = NN;
+head = NN;
+
+// end
+NN->next = NULL;
+Node* p = head;
+while (p->next != NULL) {
+    p = p->next;
+}
+p->next = NN;
+NN->prev = p;
+
+// middle
+Node* p = head;
+int k = 1;
+while ((p != NULL) && (k < position - 1)) {
+    k++;
+    p = p->next;
+}
+NN->next = p->next;
+NN->prev = p;
+p->next = NN;
+****************************
+        traverse()
+****************************
+Node* p = head;
+while (p != NULL) {
+    cout << p->data << " ";
+    p = p->next;
+}
+****************************
+        search()
+****************************
+Node* p = head;
+int N = 1;
+while (p != NULL) {
+    if (p->data == d) {
+        cout << "Data Found node " << N << endl;
+    } else {
+        N++;
+    }
+    p = p->next;
+}
+****************************
+        lenghtlist()
+****************************
+Node* p = head;
+int L = 0;
+while (p != NULL) {
+    L++;
+    p = p->next;
+}
+cout << L;
+****************************
+        delete()
+****************************
+Node* temp, * prev;
+temp = head;
+
+// beg
+head = temp->next;
+head->prev = NULL;
+delete temp;
+
+// end
+while (temp->next != NULL) {
+    prev = temp;
+    temp = temp->next;
+}
+prev->next = NULL;
+delete temp;
+
+// middle
+int k = 1;
+while (temp != NULL && k < position) {
+    k++;
+    prev = temp;
+    temp = temp->next;
+}
+prev->next = temp->next;
+temp->next->prev = prev;
+delete temp;

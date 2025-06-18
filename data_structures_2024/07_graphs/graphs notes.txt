@@ -1,0 +1,13 @@
+graph is a type of datasructure combination of nodes and edges
+types of graph->directed , undirected ,weighted
+
+undirected graph
+degree:numb of edges connected with a node
+directed graph
+indegree:number of edges comming towards a node
+outdegree:number of edges moving away from a node
+
+terms cyclicgraph,ayclicgraph
+
+graph implementation ->adjaancay matrix,adjancay list
+traversals ->BFS,DFS
